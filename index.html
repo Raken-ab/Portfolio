@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
   <title>Raken Belayet — Software Engineer</title>
   <meta name="description" content="Portfolio of Raken Belayet — IT student and freelance developer specializing in full-stack applications, mobile dev, and database systems.">
@@ -16,10 +16,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap">
   <link rel="stylesheet" href="style.css">
-  <meta name="theme-color" content="#0d1117">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1117'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='700' fill='%2300f2fe' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0a0e1a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230a0e1a'/%3E%3Ctext x='50' y='68' font-size='50' font-family='monospace' font-weight='700' fill='%23ffb454' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E">
 </head>
 <body>
   <a class="sr-only" href="#about">Skip to content</a>
@@ -34,86 +34,123 @@
     </button>
     <nav id="primaryNav" class="nav-links" aria-label="Main Navigation">
       <a href="#about">About</a>
-      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
       <a href="#work">Work</a>
       <a href="#contact">Contact</a>
+      <a href="assets/RakenResume1.pdf" class="nav-cta" download>Résumé</a>
     </nav>
   </header>
 
   <main>
     <!-- Hero / About Section -->
     <section class="hero" id="about">
-      <div class="hero-header">
-        <div>
-          <p class="hero-kicker">Software Engineer • IT Student</p>
-          <h1 class="hero-title">Raken<br>Belayet</h1>
-        </div>
-        <div class="hero-badges" aria-label="Highlights">
-          <span>Freelance-ready</span>
-          <span>Builds with care</span>
-          <span>Open to collaboration</span>
-        </div>
-      </div>
+      <p class="hero-eyebrow">Software Engineer — Final-Year IT Student</p>
 
-      <div class="hero-split">
+      <div class="hero-grid">
+        <div class="title-block blueprint-frame" aria-label="Profile summary">
+          <h1 class="hero-name">Raken<br>Belayet</h1>
+          <dl class="title-block__fields">
+            <div>
+              <dt>Role</dt>
+              <dd>Software Engineer &amp; Student</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Full-stack, mobile &amp; relational systems</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Open to freelance &amp; collaboration</dd>
+            </div>
+          </dl>
+        </div>
+
         <div class="hero-bio">
-          <p class="greeting">Hey! 👋</p>
-          <p class="hero-intro">
-            I build thoughtful software that blends reliable engineering with a clear product mindset.
-          </p>
           <p>
-            I’m a final-year Information Technology student with a deep passion for programming,
-            problem-solving, and creating software that makes a real difference. Whether I’m
-            shaping database architecture, shipping a mobile app, or prototyping a fast-paced game
-            concept, I enjoy turning ideas into polished, usable experiences.
+            I write full-stack and mobile applications end to end — from relational
+            schema design through to shipped UI. Recent work spans an offline-first
+            habit tracker, a desktop rental management system built on a SQL back end,
+            and a systems-driven game jam entry that took first place. I like projects
+            where the backend constraints shape the product as much as the interface does.
           </p>
+
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="assets/RakenResume1.pdf" download>Download CV</a>
+            <a class="btn btn--outline" href="#contact">Get in touch</a>
+          </div>
+
+          <div class="hero-contact-strip">
+            <button type="button" class="copy-email" data-email="rakenhossain@gmail.com" aria-label="Copy email address rakenhossain@gmail.com">
+              <span class="copy-email__text">rakenhossain@gmail.com</span>
+              <span class="copy-email__status" aria-live="polite"></span>
+            </button>
+            <div class="hero-socials">
+              <a href="https://github.com/Raken-ab" target="_blank" rel="noopener noreferrer" aria-label="Raken's GitHub">
+                <img src="assets/github.png" alt="" loading="lazy">
+              </a>
+              <a href="https://linkedin.com/in/raken-belayet" target="_blank" rel="noopener noreferrer" aria-label="Raken's LinkedIn">
+                <img src="assets/linkedin.png" alt="" loading="lazy">
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-      <h2 class="section-heading">Services</h2>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+      <h2 class="section-heading">Skills</h2>
+      <p class="skills-role">Software Engineer &amp; Student</p>
 
-      <div class="services-grid">
-        <article class="service-card">
-          <h3>Full-Stack Development</h3>
+      <ul class="lang-chips" aria-label="Core languages">
+        <li>C#</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>TypeScript</li>
+      </ul>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Full-Stack Development &amp; Mobile Apps</h3>
           <ul>
-            <li>Web applications</li>
-            <li>REST API design</li>
+            <li>Web applications &amp; REST API design</li>
             <li>Database-backed systems</li>
-            <li>Agile delivery</li>
+            <li>Offline-first mobile storage</li>
+            <li>Cross-platform, gesture-driven UI</li>
           </ul>
+          <div class="tool-chips">
+            <span>.NET</span>
+            <span>React Native</span>
+            <span>Expo</span>
+          </div>
         </article>
 
-        <article class="service-card">
-          <h3>Mobile App Development</h3>
-          <ul>
-            <li>React Native + Expo</li>
-            <li>Offline-first storage</li>
-            <li>Gesture-driven UI</li>
-            <li>Cross-platform builds</li>
-          </ul>
-        </article>
-
-        <article class="service-card">
+        <article class="skill-card">
           <h3>Systems &amp; Database Design</h3>
           <ul>
             <li>Relational schema design</li>
-            <li>SQL Server / MySQL</li>
             <li>Desktop apps (.NET, Java)</li>
             <li>Auth &amp; access control</li>
           </ul>
+          <div class="tool-chips">
+            <span>MySQL</span>
+            <span>Oracle</span>
+          </div>
         </article>
 
-        <article class="service-card">
+        <article class="skill-card">
           <h3>Prototyping &amp; Game Dev</h3>
           <ul>
             <li>Rapid prototyping</li>
             <li>Finite state machines</li>
             <li>AI &amp; pathfinding logic</li>
-            <li>GameMaker / Unity</li>
           </ul>
+          <div class="tool-chips">
+            <span>Unity</span>
+            <span>GameMaker</span>
+          </div>
         </article>
       </div>
     </section>
@@ -128,17 +165,17 @@
       </div>
 
       <div class="projects-grid">
-        <article class="project-card" data-title="IP Conflicts" data-type="Game Jam — 1st Place" data-image="assets/placeholder-gamejam.jpg" data-description="A winning game jam build with strategic systems, polished feedback, and a clear competitive edge." data-features="Real-time negotiation|Procedural event flow|Polished Unity visuals" data-link="https://itch.io/jam/arcademia-game-jam/entries" data-link-text="View on itch.io" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for IP Conflicts">
+        <article class="project-card" data-title="IP Conflicts" data-type="Game Jam 2025 — Winning Submission" data-image="assets/placeholder-gamejam.jpg" data-description="A winning game jam build with strategic systems, polished feedback, and a clear competitive edge." data-features="Real-time negotiation|Procedural event flow|Polished Unity visuals" data-link="https://itch.io/jam/arcademia-game-jam/entries" data-link-text="View on itch.io" data-github="https://github.com/Raken-ab/Game-Jam" data-github-text="View on GitHub" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for IP Conflicts">
           <figure class="project-image">
             <img src="assets/placeholder-gamejam.jpg" alt="Preview of IP Conflicts Game" loading="lazy">
           </figure>
           <div class="project-info">
-            <span class="project-tag">Game Jam — 1st Place</span>
+            <span class="project-tag">Game Jam 2025 — Winning Submission</span>
             <h3><a href="#">IP Conflicts</a></h3>
           </div>
         </article>
 
-        <article class="project-card" data-title="Productivity & Sobriety Tracker" data-type="Mobile App" data-image="assets/Sobriety tracker app picture.png" data-description="A habit-focused mobile tracker designed for accountability and daily progress across productivity and sobriety goals." data-features="Offline-first storage|Goal progress graphs|Cross-device sync" data-link="https://github.com/Raken-ab" data-link-text="View source on GitHub" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for Productivity & Sobriety Tracker">
+        <article class="project-card" data-title="Productivity & Sobriety Tracker" data-type="Mobile App" data-image="assets/Sobriety tracker app picture.png" data-description="A habit-focused mobile tracker designed for accountability and daily progress across productivity and sobriety goals." data-features="Offline-first storage|Goal progress graphs|Cross-device sync" data-link="https://github.com/Raken-ab/Productivity-Tracker-App" data-link-text="View source on GitHub" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for Productivity & Sobriety Tracker">
           <figure class="project-image">
             <img src="assets/Sobriety tracker app picture.png" alt="Preview of Productivity and Sobriety Tracker Mobile App" loading="lazy">
           </figure>
@@ -182,7 +219,10 @@
           <h2 id="projectModalTitle" class="project-modal__title"></h2>
           <p class="project-modal__description"></p>
           <ul class="project-modal__features"></ul>
-          <a class="project-modal__link" href="#" target="_blank" rel="noopener noreferrer"></a>
+          <div class="project-modal__link-row">
+            <a class="project-modal__link" href="#" target="_blank" rel="noopener noreferrer"></a>
+            <a class="project-modal__link project-modal__link--secondary" href="#" target="_blank" rel="noopener noreferrer" hidden></a>
+          </div>
         </div>
       </div>
     </div>
@@ -192,18 +232,25 @@
   <footer class="contact" id="contact">
     <h2 class="section-heading">Contact</h2>
     <div class="contact-card">
-      <p class="contact-copy">Always happy to talk through ambitious ideas, thoughtful prototypes, and meaningful products.</p>
-      <address class="contact-links">
-        <a href="mailto:rakenhossain@gmail.com">
-          <img src="assets/email.png" alt="Email icon" loading="lazy">
+      <p class="contact-copy">Reach out about freelance work, collaboration, or open roles — I usually reply within a day or two.</p>
+
+      <div class="contact-email-row">
+        <button type="button" class="copy-email copy-email--large" data-email="rakenhossain@gmail.com" aria-label="Copy email address rakenhossain@gmail.com">
+          <span class="copy-email__text">rakenhossain@gmail.com</span>
+          <span class="copy-email__status" aria-live="polite"></span>
+        </button>
+      </div>
+
+      <div class="contact-socials">
+        <a class="social-btn" href="https://github.com/Raken-ab" target="_blank" rel="noopener noreferrer">
+          <img src="assets/github.png" alt="" loading="lazy">
+          <span>GitHub</span>
         </a>
-        <a href="https://github.com/Raken-ab" target="_blank" rel="noopener noreferrer">
-          <img src="assets/github.png" alt="GitHub icon" loading="lazy">
+        <a class="social-btn" href="https://linkedin.com/in/raken-belayet" target="_blank" rel="noopener noreferrer">
+          <img src="assets/linkedin.png" alt="" loading="lazy">
+          <span>LinkedIn</span>
         </a>
-        <a href="https://linkedin.com/in/raken-belayet" target="_blank" rel="noopener noreferrer">
-          <img src="assets/linkedin.png" alt="LinkedIn icon" loading="lazy">
-        </a>
-      </address>
+      </div>
     </div>
   </footer>
 
