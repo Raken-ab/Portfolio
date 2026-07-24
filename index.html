@@ -1,119 +1,180 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google Font: Inter -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Raken Belayet — Software Engineer</title>
+  <meta name="description" content="Portfolio of Raken Belayet — IT student and freelance developer specializing in full-stack applications, mobile dev, and database systems.">
+  <meta name="author" content="Raken Belayet">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Raken Belayet — Raken Belayet">
+  <meta property="og:description" content="Building resilient point-of-sale software, offline-first mobile apps, and relational databases.">
+  <meta property="og:type" content="website">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Floating Navigation -->
-  <nav class="navbar">
-    <a href="#" class="brand">Majd</a>
-    <div class="nav-links">
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="#" class="brand" aria-label="Raken Belayet Home">Raken Belayet</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links" aria-label="Main Navigation">
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#contact">Contact</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <!-- Container Wrapper -->
-  <div class="container">
-
-    <!-- Hero Section -->
-    <header class="hero">
-      <div class="hero-title-row">
-        <h1>SOFTWARE ENGINEER</h1>
-        <span class="tag">/CREATING SINCE 2020</span>
+  <main>
+    <!-- Hero / About Section -->
+    <section class="hero" id="about">
+      <div class="hero-header">
+        <h1 class="hero-title">Software<br>Engineer</h1>
+        <span class="meta-tag">/BUILDING SINCE 2023</span>
       </div>
 
-      <div class="hero-body">
-        <div class="hero-text">
-          <h2>Hey!</h2>
-          <p>I’m a builder creating high-quality, modern, scalable, and conversion-driven web experiences.</p>
+      <div class="hero-split">
+        <div class="hero-bio">
+          <p class="greeting">Hey! 👋</p>
+          <p>
+            I'm an IT student and freelance developer based in Potchefstroom, South Africa.
+            I build systems that need to hold up under pressure — point-of-sale software,
+            offline-first mobile apps, relational databases, and the occasional
+            48-hour game jam boss fight.
+          </p>
         </div>
-        <div class="quote-card">
-          <p>"From idea to launch. Clean, scalable digital products built to move fast, stay simple, and perform in real-world use."</p>
-        </div>
-      </div>
-    </header>
 
-    <!-- Services Grid -->
-    <section class="services">
-      <p class="section-label">SERVICES</p>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Website Migration</h3>
-          <ul>
-            <li>Web Migration</li>
-            <li>Optimization</li>
-            <li>Framer Rebuild</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <h3>Framer Templates</h3>
-          <ul>
-            <li>Startup</li>
-            <li>Agency</li>
-            <li>SaaS</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <h3>Frontend Dev</h3>
-          <ul>
-            <li>UI Dev</li>
-            <li>Responsive Layouts</li>
-            <li>Web Performance</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <h3>Product Consulting</h3>
-          <ul>
-            <li>Product Direction</li>
-            <li>Web Strategy</li>
-            <li>Technical Guidance</li>
-          </ul>
-        </div>
+        <blockquote class="hero-callout">
+          <p>
+            "Good software isn't clever — it's predictable. I design for the state
+            you didn't plan for."
+          </p>
+        </blockquote>
       </div>
     </section>
 
-    <!-- Featured Projects Grid -->
-    <section class="projects">
-      <div class="section-header">
-        <h2>Featured Projects</h2>
-        <a href="#" class="link-btn">View All Work</a>
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <h2 class="section-heading">Services</h2>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Full-Stack Development</h3>
+          <ul>
+            <li>Web applications</li>
+            <li>REST API design</li>
+            <li>Database-backed systems</li>
+            <li>Agile delivery</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <h3>Mobile App Development</h3>
+          <ul>
+            <li>React Native + Expo</li>
+            <li>Offline-first storage</li>
+            <li>Gesture-driven UI</li>
+            <li>Cross-platform builds</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <h3>Systems &amp; Database Design</h3>
+          <ul>
+            <li>Relational schema design</li>
+            <li>SQL Server / MySQL</li>
+            <li>Desktop apps (.NET, Java)</li>
+            <li>Auth &amp; access control</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <h3>Prototyping &amp; Game Dev</h3>
+          <ul>
+            <li>Rapid prototyping</li>
+            <li>Finite state machines</li>
+            <li>AI &amp; pathfinding logic</li>
+            <li>GameMaker / Unity</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work" id="work">
+      <div class="work-header">
+        <h2 class="section-heading">Featured Projects</h2>
+        <a href="https://github.com/Raken-ab" class="view-all" target="_blank" rel="noopener noreferrer">
+          View All Work <span aria-hidden="true">→</span>
+        </a>
       </div>
 
       <div class="projects-grid">
-        <div class="project-card">
-          <div class="image-placeholder"></div>
-          <h3>Damas</h3>
-          <p>Agency Framer Template</p>
-        </div>
-        <div class="project-card">
-          <div class="image-placeholder"></div>
-          <h3>Najm</h3>
-          <p>SaaS Framer Template</p>
-        </div>
-        <div class="project-card">
-          <div class="image-placeholder"></div>
-          <h3>Kavi</h3>
-          <p>AI Framer Template</p>
-        </div>
-        <div class="project-card">
-          <div class="image-placeholder"></div>
-          <h3>PostWing</h3>
-          <p>Social Media Scheduler</p>
-        </div>
+        <article class="project-card">
+          <figure class="project-image">
+            <img src="placeholder-gamejam.jpg" alt="Preview of IP Conflicts Game" loading="lazy">
+          </figure>
+          <div class="project-info">
+            <span class="project-tag">Game Jam — 1st Place</span>
+            <h3><a href="#">IP Conflicts</a></h3>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="project-image">
+            <img src="placeholder-mobile.jpg" alt="Preview of Productivity and Sobriety Tracker Mobile App" loading="lazy">
+          </figure>
+          <div class="project-info">
+            <span class="project-tag">Mobile App</span>
+            <h3><a href="#">Productivity &amp; Sobriety Tracker</a></h3>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="project-image">
+            <img src="placeholder-desktop.jpg" alt="Preview of Roadrunner Rentals Desktop Application" loading="lazy">
+          </figure>
+          <div class="project-info">
+            <span class="project-tag">Desktop &amp; Database</span>
+            <h3><a href="#">Roadrunner Rentals System</a></h3>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="project-image placeholder-box">
+            <!-- Optional visual placeholder for upcoming projects -->
+          </figure>
+          <div class="project-info">
+            <span class="project-tag">Coming Soon</span>
+            <h3>Next Build</h3>
+          </div>
+        </article>
       </div>
     </section>
+  </main>
 
-  </div>
+  <!-- Footer / Contact -->
+  <footer class="contact" id="contact">
+    <h2 class="section-heading">Contact</h2>
+    <address class="contact-links">
+      <a href="mailto:rakenhossain@gmail.com">rakenhossain@gmail.com</a>
+      <a href="https://github.com/Raken-ab" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/raken-belayet" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </address>
+  </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>
