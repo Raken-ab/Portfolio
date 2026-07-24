@@ -1,44 +1,81 @@
 ﻿/* ==========================================================================
    Reset
    ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
 /* ==========================================================================
    Tokens
    ========================================================================== */
 :root {
   --bg: #0b1220;
-  --surface: rgba(255,255,255,0.04);
-  --panel: rgba(255,255,255,0.04);
-  --border: rgba(255,255,255,0.06);
+  --surface: rgba(255, 255, 255, 0.04);
+  --panel: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.06);
   --text: #eef2f7;
   --text-muted: #9aa6b2;
   --muted: #9aa6b2;
   --accent: #38bdf8;
+
   --radius-lg: 20px;
   --radius-md: 14px;
   --radius-pill: 999px;
+
   --max-width: 1160px;
   --section-pad: 88px;
+
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
-}
-
-  --radius-lg: 20px;
-  --radius-md: 14px;
-  --radius-pill: 999px;
-
-  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono: 'Menlo', 'Consolas', monospace;
-
-  --max-width: 1200px;
-  --section-padding: 120px;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Layout helpers
+   ========================================================================== */
+section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--section-pad) 40px;
+}
+
+.section-heading {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 40px;
 }
 
 /* ==========================================================================
@@ -50,94 +87,42 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
->>>>>>> parent of cb04522 (Add project modal, dark theme, and assets)
-
-/* Navbar */
-.navbar { position:fixed; left:50%; transform:translateX(-50%); top:20px; width:min(960px, calc(100% - 40px)); display:flex; align-items:center; justify-content:space-between; gap:20px; padding:12px 20px; background: rgba(8,12,20,0.7); border:1px solid var(--border); border-radius:var(--radius-pill); backdrop-filter: blur(8px); }
-.brand { font-family:var(--font-mono); font-weight:700; color:var(--accent) }
-.nav-links { display:flex; gap:20px; align-items:center }
-.nav-links a{ color:var(--muted); font-weight:600 }
-.nav-links a:hover{ color:var(--text) }
-.nav-toggle{ display:none; background:transparent; border:0; cursor:pointer; padding:6px }
-.nav-toggle span{ display:block; width:22px; height:3px; background:var(--text); margin:4px 0; border-radius:3px }
-
-/* Hero */
-.hero { padding-top: calc(var(--section-pad) + 60px); }
-.hero-header { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:44px; flex-wrap:wrap }
-.hero-title { font-size:clamp(3rem, 8vw, 6rem); line-height:0.95; font-weight:800 }
-.meta-tag { font-family:var(--font-mono); color:var(--accent); background: rgba(56,189,248,0.08); padding:8px 14px; border-radius:999px }
-.hero-split { display:grid; grid-template-columns: 1fr 1fr; gap:28px }
-.hero-bio, .hero-callout { background:var(--panel); border:1px solid var(--border); padding:28px; border-radius:var(--radius-lg) }
-.greeting { font-size:1.4rem; margin-bottom:8px }
-.hero-callout p{ color:var(--text); font-style:italic }
-
-/* Skills / Services */
-.skills-badge-container { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:14px; margin-bottom:24px }
-.skill-category { background:var(--panel); border:1px solid var(--border); padding:18px; border-radius:var(--radius-md) }
-.category-title { font-size:0.82rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px }
-.badge-group { display:flex; flex-wrap:wrap; gap:8px }
-.skill-badge { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.04); padding:6px 10px; border-radius:999px; font-weight:600; font-size:0.88rem }
-
-.services-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:16px }
-.service-card { background:var(--panel); border:1px solid var(--border); padding:20px; border-radius:var(--radius-md) }
-.card-desc{ color:var(--muted); margin-bottom:10px }
-.service-card li{ padding-left:12px; position:relative; margin-bottom:8px }
-.service-card li::before{ content:'•'; position:absolute; left:0; color:var(--accent) }
-
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  width: min(960px, calc(100% - 40px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 20px;
+  background: rgba(8, 12, 20, 0.7);
   border: 1px solid var(--border);
   border-radius: var(--radius-pill);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .brand {
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-weight: 700;
   font-size: 0.95rem;
+  color: var(--accent);
   white-space: nowrap;
 }
->>>>>>> parent of cb04522 (Add project modal, dark theme, and assets)
 
-/* Projects */
-.work-header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px }
-.view-all { font-family:var(--font-mono); padding:10px 14px; border-radius:var(--radius-pill); background:var(--panel); border:1px solid var(--border) }
-.projects-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:16px }
-.project-card{ background:var(--panel); border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden; cursor:pointer }
-.project-image { background:#071022 }
-.project-image img { width:100%; height:180px; object-fit:cover }
-.project-info{ padding:14px }
-.project-tag{ display:inline-block; color:var(--accent); font-family:var(--font-mono); font-size:0.72rem; margin-bottom:8px }
-.project-info h3{ margin:0; font-size:1.05rem }
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 
-/* Modal */
-.project-modal{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; z-index:200 }
-.project-modal.is-open{ display:flex }
-.project-modal__backdrop{ position:absolute; inset:0; background:rgba(2,6,12,0.9) }
-.project-modal__content{ position:relative; width:min(940px, calc(100% - 40px)); max-height:calc(100vh - 60px); overflow:auto; background:var(--panel); border:1px solid var(--border); border-radius:var(--radius-lg); padding:26px }
-.project-modal__close{ position:absolute; top:12px; right:12px; width:36px; height:36px; border-radius:50%; border:0; background:rgba(255,255,255,0.04); cursor:pointer }
-.project-modal__header h3{ margin:0 0 6px }
-.project-modal__tag{ color:var(--accent); font-family:var(--font-mono); font-size:0.78rem }
-.project-modal__description{ color:var(--muted); margin:12px 0 }
-.project-modal__gallery{ display:grid; grid-template-columns: repeat(3,1fr); gap:10px; margin-bottom:12px }
-.project-modal__gallery img{ width:100%; border-radius:var(--radius-md); object-fit:cover }
-.project-modal__links{ display:flex; gap:10px; flex-wrap:wrap }
-.button{ padding:10px 14px; border-radius:999px; display:inline-flex; align-items:center; font-weight:700 }
-.button-primary{ background:var(--accent); color:#031022 }
-.button-secondary{ background:transparent; border:1px solid var(--border); color:var(--text) }
+.nav-links a {
+  color: var(--muted);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
 
-/* Contact */
-.contact{ text-align:center; padding-bottom:120px }
-.contact-email{ font-size:1.05rem; margin-bottom:10px }
-.contact-icons{ display:inline-flex; gap:14px; align-items:center }
-.contact-icons a{ display:inline-flex; width:40px; height:40px; border-radius:999px; background:rgba(255,255,255,0.03); align-items:center; justify-content:center; border:1px solid var(--border) }
-
-/* Reveal helper used by JS */
-.reveal{ opacity:0; transform:translateY(18px); transition: opacity .55s ease, transform .55s ease }
-.reveal.is-visible{ opacity:1; transform:none }
-
-/* Responsive tweaks */
-@media (max-width: 900px){ .hero-split, .services-grid, .projects-grid, .skills-badge-container { grid-template-columns: 1fr } .project-modal__gallery{ grid-template-columns: 1fr } }
-@media (max-width:720px){ .nav-toggle{ display:flex } .nav-links{ display:none; position:absolute; top:100%; right:18px; background:rgba(8,12,20,0.95); border:1px solid var(--border); padding:12px; border-radius:12px } .nav-links.is-open{ display:flex; flex-direction:column } }
+.nav-links a:hover {
+  color: var(--text);
+}
 
 .nav-toggle {
   display: none;
@@ -159,75 +144,52 @@ body {
   border-radius: 999px;
 }
 
-.nav-links a:hover {
-  color: var(--text);
-}
-
-/* ==========================================================================
-   Layout helpers
-   ========================================================================== */
-section {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: var(--section-padding) 40px;
-}
-
-.section-heading {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 40px;
-}
-
 /* ==========================================================================
    Hero
    ========================================================================== */
 .hero {
-  padding-top: calc(var(--section-padding) + 60px);
+  padding-top: calc(var(--section-pad) + 60px);
 }
 
 .hero-header {
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
   gap: 24px;
-  margin-bottom: 60px;
+  margin-bottom: 44px;
   flex-wrap: wrap;
 }
 
 .hero-title {
-  font-size: clamp(3rem, 9vw, 7.5rem);
-  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 6rem);
   line-height: 0.95;
+  font-weight: 800;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
 }
 
 .meta-tag {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.08);
+  padding: 8px 14px;
+  border-radius: 999px;
   white-space: nowrap;
-  padding-bottom: 12px;
 }
 
 .hero-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 28px;
   align-items: stretch;
 }
 
-.hero-bio p {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-<<<<<<< HEAD
->>>>>>> parent of cb04522 (Add project modal, dark theme, and assets)
-=======
->>>>>>> Branch-2
-  max-width: 460px;
+.hero-bio,
+.hero-callout {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 28px;
+  border-radius: var(--radius-lg);
 }
 
 .hero-bio .greeting {
@@ -236,11 +198,13 @@ section {
   margin-bottom: 16px;
 }
 
+.hero-bio p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 460px;
+}
+
 .hero-callout {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 36px;
   display: flex;
   align-items: center;
 }
@@ -249,28 +213,67 @@ section {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.5;
+  font-style: italic;
+  color: var(--text);
 }
 
 /* ==========================================================================
-   Services
+   Skills / Services
    ========================================================================== */
+.skills-badge-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.skill-category {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: var(--radius-md);
+}
+
+.category-title {
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-badge {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
 }
 
 .service-card {
-  background: var(--surface);
+  background: var(--panel);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 28px 24px;
+  padding: 20px;
+  border-radius: var(--radius-md);
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .service-card:hover {
-  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.08);
   transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .service-card h3 {
@@ -279,19 +282,23 @@ section {
   margin-bottom: 16px;
 }
 
+.card-desc {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
 .service-card li {
-  font-size: 0.9rem;
   color: var(--text-muted);
-  padding-left: 14px;
+  padding-left: 12px;
   position: relative;
   margin-bottom: 8px;
 }
 
 .service-card li::before {
-  content: "—";
+  content: '•';
   position: absolute;
   left: 0;
-  color: var(--border);
+  color: var(--accent);
 }
 
 /* ==========================================================================
@@ -299,9 +306,10 @@ section {
    ========================================================================== */
 .work-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
 .work-header .section-heading {
@@ -309,62 +317,165 @@ section {
 }
 
 .view-all {
+  font-family: var(--font-mono);
   font-size: 0.9rem;
-  font-weight: 500;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  padding: 10px 20px;
+  padding: 10px 14px;
   border-radius: var(--radius-pill);
+  background: var(--panel);
+  border: 1px solid var(--border);
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .view-all:hover {
-  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.08);
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
 }
 
 .project-card {
-  background: var(--surface);
+  background: var(--panel);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   overflow: hidden;
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(17, 17, 17, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .project-image {
+  background: #071022;
   aspect-ratio: 16 / 10;
-  background: linear-gradient(135deg, #EDEBE4, #F5F4F0);
-  border-bottom: 1px solid var(--border);
+}
+
+.project-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .project-info {
-  padding: 24px;
+  padding: 14px;
 }
 
 .project-tag {
   display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 10px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  margin-bottom: 8px;
 }
 
 .project-info h3 {
-  font-size: 1.15rem;
+  margin: 0;
+  font-size: 1.05rem;
   font-weight: 600;
+}
+
+/* ==========================================================================
+   Project modal
+   ========================================================================== */
+.project-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.project-modal.is-open {
+  display: flex;
+}
+
+.project-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 12, 0.9);
+}
+
+.project-modal__content {
+  position: relative;
+  width: min(940px, calc(100% - 40px));
+  max-height: calc(100vh - 60px);
+  overflow: auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+}
+
+.project-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+}
+
+.project-modal__header h3 {
+  margin: 0 0 6px;
+}
+
+.project-modal__tag {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.project-modal__description {
+  color: var(--muted);
+  margin: 12px 0;
+}
+
+.project-modal__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.project-modal__gallery img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.project-modal__links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 10px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #031022;
+}
+
+.button-secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
 }
 
 /* ==========================================================================
@@ -372,7 +483,29 @@ section {
    ========================================================================== */
 .contact {
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
+}
+
+.contact-email {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.contact-icons {
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.contact-icons a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
 }
 
 .contact-links {
@@ -393,11 +526,42 @@ section {
 }
 
 /* ==========================================================================
+   Reveal helper (used by JS)
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
+@media (max-width: 900px) {
+  .hero-split,
+  .services-grid,
+  .projects-grid,
+  .skills-badge-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-modal__gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   :root {
-    --section-padding: 80px;
+    --section-pad: 80px;
+  }
+
+  section {
+    padding: var(--section-pad) 20px;
   }
 
   .navbar {
@@ -411,27 +575,31 @@ section {
     font-size: 0.8rem;
   }
 
-  section {
-    padding: var(--section-padding) 20px;
-  }
-
-  .hero-split {
-    grid-template-columns: 1fr;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
   .work-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
   }
-=======
 }
->>>>>>> Branch-2
+
+@media (max-width: 720px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 18px;
+    background: rgba(8, 12, 20, 0.95);
+    border: 1px solid var(--border);
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+}
