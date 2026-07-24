@@ -1,77 +1,134 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raken Belayet — Portfolio</title>
-  <meta name="description" content="Portfolio of Raken Belayet — full-stack and mobile developer.">
+  
+  <!-- SEO Meta Tags -->
+  <title>Raken Belayet — Software Engineer</title>
+  <meta name="description" content="Portfolio of Raken Belayet — IT student and freelance developer specializing in full-stack applications, mobile dev, and database systems.">
+  <meta name="author" content="Raken Belayet">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Raken Belayet — Software Engineer">
+  <meta property="og:description" content="Building resilient point-of-sale software, offline-first mobile apps, and relational databases.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="style.css">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1117'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='700' fill='%2300f2fe' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E">
 </head>
-
 <body>
+  <a class="sr-only" href="#about">Skip to content</a>
 
+  <!-- Navigation -->
   <header class="navbar">
-    <a href="#" class="brand">Raken Belayet</a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" type="button">
+    <a href="#" class="brand" aria-label="Raken Belayet — Home">RB.</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav" type="button">
       <span></span>
       <span></span>
       <span></span>
     </button>
-    <nav class="nav-links" aria-label="Main Navigation">
+    <nav id="primaryNav" class="nav-links" aria-label="Main Navigation">
       <a href="#about">About</a>
-      <a href="#services">Skills</a>
+      <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <div id="hudValue" aria-hidden="true" style="position:fixed; left:12px; top:12px; font-family:var(--font-mono); color:var(--muted);"></div>
-
   <main>
-
-    <section class="hero" id="about" data-state="About">
+    <!-- Hero / About Section -->
+    <section class="hero" id="about">
       <div class="hero-header">
-        <h1 class="hero-title">Raken<br>Belayet</h1>
-        <span class="meta-tag">/BUILDING SINCE 2023</span>
+        <div>
+          <p class="hero-kicker">Software Engineer • IT Student</p>
+          <h1 class="hero-title">Raken<br>Belayet</h1>
+        </div>
+        <div class="hero-badges" aria-label="Highlights">
+          <span>Freelance-ready</span>
+          <span>Builds with care</span>
+          <span>Open to collaboration</span>
+        </div>
       </div>
 
       <div class="hero-split">
         <div class="hero-bio">
           <p class="greeting">Hey! 👋</p>
-          <p>I build reliable software, mobile apps, and database systems. I enjoy prototyping, performance tuning, and production-ready engineering.</p>
-        </div>
-        <blockquote class="hero-callout">
-          <p>"Good software isn't clever — it's predictable. I design for the state you didn't plan for."</p>
-
-
-        <blockquote class="hero-callout">
-          <p>
-            "Good software isn't clever — it's predictable. I design for the state
-            you didn't plan for."
+          <p class="hero-intro">
+            I build thoughtful software that blends reliable engineering with a clear product mindset.
           </p>
-<<<<<<< HEAD
->>>>>>> parent of cb04522 (Add project modal, dark theme, and assets)
-=======
->>>>>>> Branch-2
-        </blockquote>
+          <p>
+            I’m a final-year Information Technology student with a deep passion for programming,
+            problem-solving, and creating software that makes a real difference. Whether I’m
+            shaping database architecture, shipping a mobile app, or prototyping a fast-paced game
+            concept, I enjoy turning ideas into polished, usable experiences.
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="skills" id="services" data-state="Skills">
-      <h2 class="section-heading">Skills</h2>
-      <div class="skills-badge-container">
-        <div class="skill-category"><div class="category-title">Languages</div><div class="badge-group"><span class="skill-badge">C#</span><span class="skill-badge">C++</span><span class="skill-badge">Java</span></div></div>
-        <div class="skill-category"><div class="category-title">Frameworks</div><div class="badge-group"><span class="skill-badge">.NET</span><span class="skill-badge">React Native</span></div></div>
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <h2 class="section-heading">Services</h2>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Full-Stack Development</h3>
+          <ul>
+            <li>Web applications</li>
+            <li>REST API design</li>
+            <li>Database-backed systems</li>
+            <li>Agile delivery</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <h3>Mobile App Development</h3>
+          <ul>
+            <li>React Native + Expo</li>
+            <li>Offline-first storage</li>
+            <li>Gesture-driven UI</li>
+            <li>Cross-platform builds</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <h3>Systems &amp; Database Design</h3>
+          <ul>
+            <li>Relational schema design</li>
+            <li>SQL Server / MySQL</li>
+            <li>Desktop apps (.NET, Java)</li>
+            <li>Auth &amp; access control</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <h3>Prototyping &amp; Game Dev</h3>
+          <ul>
+            <li>Rapid prototyping</li>
+            <li>Finite state machines</li>
+            <li>AI &amp; pathfinding logic</li>
+            <li>GameMaker / Unity</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <section id="work" data-state="Work">
-      <div class="work-header"><h2 class="section-heading">Featured Projects</h2><a class="view-all" href="#">View All</a></div>
+    <!-- Work Section -->
+    <section class="work" id="work">
+      <div class="work-header">
+        <h2 class="section-heading">Featured Projects</h2>
+        <a href="https://github.com/Raken-ab" class="view-all" target="_blank" rel="noopener noreferrer">
+          View All Work <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
       <div class="projects-grid">
-        <article class="project-card">
+        <article class="project-card" data-title="IP Conflicts" data-type="Game Jam — 1st Place" data-image="assets/placeholder-gamejam.jpg" data-description="A winning game jam build with strategic systems, polished feedback, and a clear competitive edge." data-features="Real-time negotiation|Procedural event flow|Polished Unity visuals" data-link="https://itch.io/jam/arcademia-game-jam/entries" data-link-text="View on itch.io" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for IP Conflicts">
           <figure class="project-image">
             <img src="assets/placeholder-gamejam.jpg" alt="Preview of IP Conflicts Game" loading="lazy">
           </figure>
@@ -81,9 +138,9 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-title="Productivity & Sobriety Tracker" data-type="Mobile App" data-image="assets/Sobriety tracker app picture.png" data-description="A habit-focused mobile tracker designed for accountability and daily progress across productivity and sobriety goals." data-features="Offline-first storage|Goal progress graphs|Cross-device sync" data-link="https://github.com/Raken-ab" data-link-text="View source on GitHub" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for Productivity & Sobriety Tracker">
           <figure class="project-image">
-            <img src="placeholder-mobile.jpg" alt="Preview of Productivity and Sobriety Tracker Mobile App" loading="lazy">
+            <img src="assets/Sobriety tracker app picture.png" alt="Preview of Productivity and Sobriety Tracker Mobile App" loading="lazy">
           </figure>
           <div class="project-info">
             <span class="project-tag">Mobile App</span>
@@ -91,9 +148,9 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-title="Roadrunner Rentals System" data-type="Desktop & Database" data-image="assets/Road Runner rentals picture.jpg" data-description="A desktop rental management system built for reliable inventory control, booking workflows, and data-driven reporting." data-features="SQL-backed rentals|Role-based access|Payment reconciliation" data-link="https://github.com/Raken-ab" data-link-text="View source on GitHub" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for Roadrunner Rentals System">
           <figure class="project-image">
-            <img src="placeholder-desktop.jpg" alt="Preview of Roadrunner Rentals Desktop Application" loading="lazy">
+            <img src="assets/Road Runner rentals picture.jpg" alt="Preview of Roadrunner Rentals Desktop Application" loading="lazy">
           </figure>
           <div class="project-info">
             <span class="project-tag">Desktop &amp; Database</span>
@@ -101,7 +158,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card project-card--locked" data-locked="true">
           <figure class="project-image placeholder-box">
             <!-- Optional visual placeholder for upcoming projects -->
           </figure>
@@ -112,20 +169,44 @@
         </article>
       </div>
     </section>
+
+    <div class="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+      <div class="project-modal__backdrop" data-modal-close></div>
+      <div class="project-modal__content">
+        <button type="button" class="project-modal__close" aria-label="Close project details">×</button>
+        <div class="project-modal__image-wrap">
+          <img class="project-modal__image" src="" alt="" loading="lazy">
+        </div>
+        <div class="project-modal__body">
+          <span class="project-modal__tag"></span>
+          <h2 id="projectModalTitle" class="project-modal__title"></h2>
+          <p class="project-modal__description"></p>
+          <ul class="project-modal__features"></ul>
+          <a class="project-modal__link" href="#" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- Footer / Contact -->
   <footer class="contact" id="contact">
     <h2 class="section-heading">Contact</h2>
-    <address class="contact-links">
-      <a href="mailto:rakenhossain@gmail.com">rakenhossain@gmail.com</a>
-      <a href="https://github.com/Raken-ab" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://linkedin.com/in/raken-belayet" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </address>
+    <div class="contact-card">
+      <p class="contact-copy">Always happy to talk through ambitious ideas, thoughtful prototypes, and meaningful products.</p>
+      <address class="contact-links">
+        <a href="mailto:rakenhossain@gmail.com">
+          <img src="assets/email.png" alt="Email icon" loading="lazy">
+        </a>
+        <a href="https://github.com/Raken-ab" target="_blank" rel="noopener noreferrer">
+          <img src="assets/github.png" alt="GitHub icon" loading="lazy">
+        </a>
+        <a href="https://linkedin.com/in/raken-belayet" target="_blank" rel="noopener noreferrer">
+          <img src="assets/linkedin.png" alt="LinkedIn icon" loading="lazy">
+        </a>
+      </address>
+    </div>
   </footer>
->>>>>>> parent of cb04522 (Add project modal, dark theme, and assets)
 
   <script src="script.js" defer></script>
 </body>
-
 </html>

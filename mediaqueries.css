@@ -2,22 +2,10 @@
   .hero {
     padding-top: 140px;
   }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .about-grid,
-  .services-grid,
-  .projects-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 780px) {
   .navbar {
-    position: fixed;
     width: calc(100% - 32px);
     max-width: none;
     padding: 14px 18px;
@@ -29,85 +17,62 @@
 
   .nav-links {
     position: absolute;
-    top: 100%;
-    right: 18px;
-    left: 18px;
-    margin-top: 14px;
+    top: calc(100% + 10px);
+    right: 0;
+    left: 0;
     padding: 18px;
     flex-direction: column;
     gap: 16px;
-    background: rgba(255, 255, 255, 0.96);
-    border-radius: 24px;
-    border: 1px solid rgba(17, 17, 17, 0.08);
-    box-shadow: 0 28px 80px rgba(17, 17, 17, 0.12);
+    background: rgba(22, 27, 34, 0.96);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
     transform: scaleY(0);
-    transform-origin: top right;
-    transition: transform 0.2s ease;
+    transform-origin: top;
+    transition: transform 0.2s ease, opacity 0.2s ease;
     visibility: hidden;
     opacity: 0;
   }
 
-  .nav-links.nav-open {
+  .nav-links.is-open {
     transform: scaleY(1);
     visibility: visible;
     opacity: 1;
-  }
-
-  .nav-links a {
-    color: var(--text-main);
   }
 
   .hero {
     padding-top: 130px;
   }
 
-  .hero-actions {
+  .hero-header {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
   }
 
   .projects-grid {
-    gap: 20px;
-  }
-
-  .project-card {
     grid-template-columns: 1fr;
-  }
-
-  .hero-panel {
-    margin-top: 40px;
+    gap: 20px;
   }
 }
 
 @media (max-width: 640px) {
-  .container {
-    padding: 0 18px 56px;
+  section {
+    padding: var(--section-padding) 18px;
   }
 
-  .hero h1 {
+  .hero-title {
     font-size: 2.75rem;
   }
 
-  .hero-card,
-  .stat-card,
+  .hero-bio,
   .service-card,
   .project-card,
-  .about-card,
-  .contact-form {
+  .contact-card {
     padding: 24px;
   }
 
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-header,
-  .contact-meta {
-    gap: 16px;
-  }
-
   .nav-links {
-    right: 14px;
-    left: 14px;
+    right: 0;
+    left: 0;
   }
 }
