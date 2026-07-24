@@ -1,453 +1,92 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
- 
-
-  <!-- SEO Meta Tags -->
-
-  <title>Raken Belayet — Software Engineer</title>
-
-  <meta name="description" content="Portfolio of Raken Belayet — IT student and freelance developer specializing in full-stack applications, mobile dev, and database systems.">
-
-  <meta name="author" content="Raken Belayet">
-
-
-
-  <!-- Open Graph / Social Sharing -->
-
-  <meta property="og:title" content="Raken Belayet — Software Engineer">
-
-  <meta property="og:description" content="Building resilient point-of-sale software, offline-first mobile apps, and relational databases.">
-
-  <meta property="og:type" content="website">
-
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
-
+  <title>Raken Belayet — Portfolio</title>
+  <meta name="description" content="Portfolio of Raken Belayet — full-stack and mobile developer.">
   <link rel="stylesheet" href="style.css">
-
+  <meta name="color-scheme" content="dark">
 </head>
 
 <body>
 
-
-
-  <!-- Navigation -->
-
   <header class="navbar">
-
-    <a href="#" class="brand" aria-label="My Portfolio Home">My Portfolio</a>
-
+    <a href="#" class="brand">Raken Belayet</a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" type="button">
-
       <span></span>
-
       <span></span>
-
       <span></span>
-
     </button>
-
     <nav class="nav-links" aria-label="Main Navigation">
-
       <a href="#about">About</a>
-
       <a href="#services">Skills</a>
-
       <a href="#work">Work</a>
-
       <a href="#contact">Contact</a>
-
     </nav>
-
   </header>
 
-
+  <div id="hudValue" aria-hidden="true" style="position:fixed; left:12px; top:12px; font-family:var(--font-mono); color:var(--muted);"></div>
 
   <main>
 
-    <!-- Hero / About Section -->
-
-    <section class="hero" id="about">
-
+    <section class="hero" id="about" data-state="About">
       <div class="hero-header">
-
         <h1 class="hero-title">Raken<br>Belayet</h1>
-
         <span class="meta-tag">/BUILDING SINCE 2023</span>
-
       </div>
-
-
 
       <div class="hero-split">
-
         <div class="hero-bio">
-
           <p class="greeting">Hey! 👋</p>
-
-          <p>
-
-            I’m a final-year Information Technology student with a deep passion for programming,
-
-            problem-solving, and building software that makes an impact. Whether working solo on
-
-            complex database architecture or collaborating with a team in a 48-hour game jam,
-
-            I thrive on learning new technologies and taking on new challenges. Dedicated,
-
-            adaptable, and results-driven, I always strive to deliver the best quality in
-
-            every project I take on.
-
-          </p>
-
+          <p>I build reliable software, mobile apps, and database systems. I enjoy prototyping, performance tuning, and production-ready engineering.</p>
         </div>
-
+        <blockquote class="hero-callout">
+          <p>"Good software isn't clever — it's predictable. I design for the state you didn't plan for."</p>
+        </blockquote>
       </div>
-
     </section>
 
-
-
-    <!-- Skills Section -->
-
-    <section class="skills" id="services">
-
+    <section class="skills" id="services" data-state="Skills">
       <h2 class="section-heading">Skills</h2>
-
-      <div class="skills-overview">
-
-        <div class="skills-code-block">
-
-          <pre><code>languages: ["C#", "C++", "Java", "JavaScript", "Python", "TypeScript"],
-
-currentFocus: "Full-Stack Development & Mobile Apps",
-
-databases: ["MySQL", "Oracle"],
-
-frameworks: [".NET", "React Native", "Expo"],</code></pre>
-
-        </div>
-
-        <div class="skills-detail-grid">
-
-          <article class="skill-detail-card">
-
-            <h3>Languages</h3>
-
-            <p>C#, C++, Java, JavaScript, Python, TypeScript</p>
-
-          </article>
-
-          <article class="skill-detail-card">
-
-            <h3>Current Focus</h3>
-
-            <p>Full-Stack Development & Mobile Apps</p>
-
-          </article>
-
-          <article class="skill-detail-card">
-
-            <h3>Databases</h3>
-
-            <p>MySQL, Oracle</p>
-
-          </article>
-
-          <article class="skill-detail-card">
-
-            <h3>Frameworks</h3>
-
-            <p>.NET, React Native, Expo</p>
-
-          </article>
-
-        </div>
-
+      <div class="skills-badge-container">
+        <div class="skill-category"><div class="category-title">Languages</div><div class="badge-group"><span class="skill-badge">C#</span><span class="skill-badge">C++</span><span class="skill-badge">Java</span></div></div>
+        <div class="skill-category"><div class="category-title">Frameworks</div><div class="badge-group"><span class="skill-badge">.NET</span><span class="skill-badge">React Native</span></div></div>
       </div>
-
-
-
-      <div class="services-grid">
-
-        <article class="service-card">
-
-          <h3>Full-Stack Development</h3>
-
-          <ul>
-
-            <li>Web applications</li>
-
-            <li>REST API design</li>
-
-            <li>Database-backed systems</li>
-
-            <li>Agile delivery</li>
-
-          </ul>
-
-        </article>
-
-
-
-        <article class="service-card">
-
-          <h3>Mobile App Development</h3>
-
-          <ul>
-
-            <li>React Native + Expo</li>
-
-            <li>Offline-first storage</li>
-
-            <li>Gesture-driven UI</li>
-
-            <li>Cross-platform builds</li>
-
-          </ul>
-
-        </article>
-
-
-
-        <article class="service-card">
-
-          <h3>Systems &amp; Database Design</h3>
-
-          <ul>
-
-            <li>Relational schema design</li>
-
-            <li>SQL Server / MySQL</li>
-
-            <li>Desktop apps (.NET, Java)</li>
-
-            <li>Auth &amp; access control</li>
-
-          </ul>
-
-        </article>
-
-
-
-        <article class="service-card">
-
-          <h3>Prototyping &amp; Game Dev</h3>
-
-          <ul>
-
-            <li>Rapid prototyping</li>
-
-            <li>Finite state machines</li>
-
-            <li>AI &amp; pathfinding logic</li>
-
-            <li>GameMaker / Unity</li>
-
-          </ul>
-
-        </article>
-
-      </div>
-
     </section>
 
-
-
-    <!-- Work Section -->
-
-    <section class="work" id="work">
-
-      <div class="work-header">
-
-        <h2 class="section-heading">Featured Projects</h2>
-
-        <a href="https://github.com/Raken-ab" class="view-all" target="_blank" rel="noopener noreferrer">
-
-          View All Work <span aria-hidden="true">→</span>
-
-        </a>
-
-      </div>
-
-
-
+    <section id="work" data-state="Work">
+      <div class="work-header"><h2 class="section-heading">Featured Projects</h2><a class="view-all" href="#">View All</a></div>
       <div class="projects-grid">
-
-        <article class="project-card" data-title="IP Conflicts" data-type="Game Jam — 1st Place" data-image="assets/placeholder-gamejam.jpg" data-description="A 48-hour game jam project engineered to blend tense negotiation mechanics, compelling player feedback, and a polished Unity presentation." data-features="Real-time negotiation|Procedural event flow|Polished Unity visuals" data-link="https://github.com/Raken-ab/Game-Jam" data-link-text="View source on GitHub" data-secondary-link="https://itch.io/jam/arcademia-game-jam/rate/3588317" data-secondary-link-text="View on itch.io">
-
-          <figure class="project-image">
-
-            <img src="assets/placeholder-gamejam.jpg" alt="Preview of IP Conflicts Game" loading="lazy">
-
-          </figure>
-
-          <div class="project-info">
-
-            <span class="project-tag">Game Jam — 1st Place</span>
-
-            <h3><a href="#">IP Conflicts</a></h3>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="project-card" data-title="Productivity & Sobriety Tracker" data-type="Mobile App" data-image="assets/Sobriety tracker app picture.png" data-description="An offline-first React Native & TypeScript mobile app built with Expo, designed for habit building and addiction recovery. It supports unit-based progress, daily check-ins, and continuous sobriety streaks, with intuitive swipe gestures, dark-mode styling, and local persistence through AsyncStorage." data-features="Offline-first storage|Goal progress graphs|Cross-device sync" data-link="https://github.com/Raken-ab/Productivity-Tracker-App" data-link-text="View source on GitHub">
-
-          <figure class="project-image">
-
-            <img src="assets/Sobriety tracker app picture.png" alt="Preview of Productivity and Sobriety Tracker Mobile App" loading="lazy">
-
-          </figure>
-
-          <div class="project-info">
-
-            <span class="project-tag">Mobile App</span>
-
-            <h3><a href="#">Productivity &amp; Sobriety Tracker</a></h3>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="project-card" data-title="Roadrunner Rentals System" data-type="Desktop & Database" data-image="assets/Road Runner rentals picture.jpg" data-description="A desktop rental system designed to streamline inventory, bookings, and payment reconciliation with robust SQL-backed data management." data-features="SQL-backed rentals|Role-based access|Payment reconciliation" data-link="https://github.com/Raken-ab" data-link-text="View source on GitHub">
-
-          <figure class="project-image">
-
-            <img src="assets/Road Runner rentals picture.jpg" alt="Preview of Roadrunner Rentals Desktop Application" loading="lazy">
-
-          </figure>
-
-          <div class="project-info">
-
-            <span class="project-tag">Desktop &amp; Database</span>
-
-            <h3><a href="#">Roadrunner Rentals System</a></h3>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="project-card project-card--locked" data-locked="true">
-
-          <figure class="project-image placeholder-box">
-
-            <!-- Optional visual placeholder for upcoming projects -->
-
-          </figure>
-
-          <div class="project-info">
-
-            <span class="project-tag">Coming Soon</span>
-
-            <h3>Next Build</h3>
-
-          </div>
-
-        </article>
-
+        <article class="project-card" data-project="ip-conflicts" tabindex="0"><figure class="project-image"><img src="assets/placeholder-gamejam.jpg" alt="IP Conflicts"></figure><div class="project-info"><span class="project-tag">Game Jam</span><h3>IP Conflicts</h3></div></article>
+        <article class="project-card" data-project="tracker-app" tabindex="0"><figure class="project-image"><img src="assets/Sobriety tracker app picture.png" alt="Sobriety Tracker"></figure><div class="project-info"><span class="project-tag">Mobile</span><h3>Productivity &amp; Sobriety Tracker</h3></div></article>
+        <article class="project-card" data-project="rentals-system" tabindex="0"><figure class="project-image"><img src="assets/Road Runner rentals picture.jpg" alt="Roadrunner Rentals"></figure><div class="project-info"><span class="project-tag">Desktop</span><h3>Roadrunner Rentals</h3></div></article>
+        <article class="project-card" data-project="next-build" tabindex="0"><figure class="project-image placeholder-box"></figure><div class="project-info"><span class="project-tag">Coming Soon</span><h3>Next Build</h3></div></article>
       </div>
-
     </section>
 
-
-
-    <div class="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
-
-      <div class="project-modal__backdrop" data-modal-close></div>
-
+    <div class="project-modal" role="dialog" aria-hidden="true" id="project-modal">
+      <div class="project-modal__backdrop" data-close></div>
       <div class="project-modal__content">
-
-        <button type="button" class="project-modal__close" aria-label="Close project details">×</button>
-
-        <div class="project-modal__image-wrap">
-
-          <img class="project-modal__image" src="" alt="" loading="lazy">
-
-        </div>
-
-        <div class="project-modal__body">
-
-          <span class="project-modal__tag"></span>
-
-          <h2 id="projectModalTitle" class="project-modal__title"></h2>
-
-          <p class="project-modal__description"></p>
-
-          <ul class="project-modal__features"></ul>
-
-          <div class="project-modal__links">
-
-            <a class="project-modal__link project-modal__primary-link" href="#" target="_blank" rel="noopener noreferrer"></a>
-
-            <a class="project-modal__link project-modal__secondary-link" href="#" target="_blank" rel="noopener noreferrer"></a>
-
-          </div>
-
-        </div>
-
+        <button class="project-modal__close" data-close aria-label="Close modal">✕</button>
+        <div class="project-modal__header"><div class="project-modal__tag">Project</div><h3 id="project-modal-title">Title</h3></div>
+        <p class="project-modal__description" id="project-modal-description">Description</p>
+        <div class="project-modal__gallery" id="project-modal-gallery"></div>
+        <div class="project-modal__links"><a class="button button-primary" id="project-live" href="#" target="_blank">Live</a><a class="button button-secondary" id="project-source" href="#" target="_blank">Source</a></div>
       </div>
-
     </div>
+
+    <footer class="contact" id="contact" data-state="Contact">
+      <h2 class="section-heading">Contact</h2>
+      <p class="contact-email">rakenhossain@gmail.com</p>
+      <div class="contact-icons"><a href="https://github.com/Raken-ab"><img src="assets/github.png" alt="GitHub" width="18"></a><a href="https://linkedin.com/in/raken-belayet"><img src="assets/linkedin.png" alt="LinkedIn" width="18"></a></div>
+    </footer>
 
   </main>
 
-
-
-  <!-- Footer / Contact -->
-
-  <footer class="contact" id="contact">
-
-    <h2 class="section-heading">Contact</h2>
-
-    <address class="contact-links">
-
-      <p class="contact-email">rakenhossain@gmail.com</p>
-
-      <div class="contact-icons">
-
-        <a href="https://github.com/Raken-ab" target="_blank" rel="noopener noreferrer">
-
-          <img src="assets/github.png" alt="GitHub icon" loading="lazy">
-
-        </a>
-
-        <a href="https://linkedin.com/in/raken-belayet" target="_blank" rel="noopener noreferrer">
-
-          <img src="assets/linkedin.png" alt="LinkedIn icon" loading="lazy">
-
-        </a>
-
-      </div>
-
-    </address>
-
-  </footer>
-
-
-
   <script src="script.js" defer></script>
-
 </body>
 
 </html>

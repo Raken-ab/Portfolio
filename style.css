@@ -3,7 +3,7 @@
    ========================================================================== */
 /* ==========================================================================
    Stable Unified Stylesheet — Reset + Tokens
-   This stylesheet is a clean, responsive baseline matching index.html markup.
+   A clean, responsive baseline matching `index.html` markup.
    ========================================================================== */
 :root {
   --bg: #0b1220;
@@ -109,3 +109,210 @@ main, section, footer { max-width: var(--max-width); margin: 0 auto; padding: va
 /* Responsive tweaks */
 @media (max-width: 900px){ .hero-split, .services-grid, .projects-grid, .skills-badge-container { grid-template-columns: 1fr } .project-modal__gallery{ grid-template-columns: 1fr } }
 @media (max-width:720px){ .nav-toggle{ display:flex } .nav-links{ display:none; position:absolute; top:100%; right:18px; background:rgba(8,12,20,0.95); border:1px solid var(--border); padding:12px; border-radius:12px } .nav-links.is-open{ display:flex; flex-direction:column } }
+  max-width: 460px;
+}
+
+.hero-bio .greeting {
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.hero-callout {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-callout p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Services
+   ========================================================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.08);
+  transform: translateY(-4px);
+}
+
+.service-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.service-card li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.service-card li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--border);
+}
+
+/* ==========================================================================
+   Work / Projects
+   ========================================================================== */
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.work-header .section-heading {
+  margin-bottom: 0;
+}
+
+.view-all {
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.view-all:hover {
+  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.08);
+  transform: translateY(-2px);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(17, 17, 17, 0.1);
+}
+
+.project-image {
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, #EDEBE4, #F5F4F0);
+  border-bottom: 1px solid var(--border);
+}
+
+.project-info {
+  padding: 24px;
+}
+
+.project-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.project-info h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Contact / Footer
+   ========================================================================== */
+.contact {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.contact-links a {
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: var(--text);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 80px;
+  }
+
+  .navbar {
+    top: 12px;
+    padding: 12px 20px;
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    font-size: 0.8rem;
+  }
+
+  section {
+    padding: var(--section-padding) 20px;
+  }
+
+  .hero-split {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
