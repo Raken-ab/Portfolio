@@ -16,10 +16,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Background Decorative Shapes -->
+  <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
 
   <!-- Navigation -->
   <header class="navbar">
@@ -39,7 +43,7 @@
 
   <main>
     <!-- Hero / About Section -->
-    <section class="hero" id="about">
+    <section class="hero reveal" id="about">
       <div class="hero-header">
         <h1 class="hero-title">Raken<br>Belayet</h1>
         <span class="meta-tag">/BUILDING SINCE 2023</span>
@@ -68,7 +72,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section class="services reveal" id="services">
       <h2 class="section-heading">Services</h2>
 
       <div class="services-grid">
@@ -115,7 +119,7 @@
     </section>
 
     <!-- Work Section -->
-    <section class="work" id="work">
+    <section class="work reveal" id="work">
       <div class="work-header">
         <h2 class="section-heading">Featured Projects</h2>
         <a href="https://github.com/Raken-ab" class="view-all" target="_blank" rel="noopener noreferrer">
@@ -124,51 +128,69 @@
       </div>
 
       <div class="projects-grid">
-        <article class="project-card">
+        <article class="project-card" data-project="ip-conflicts" tabindex="0">
           <figure class="project-image">
             <img src="assets/placeholder-gamejam.jpg" alt="Preview of IP Conflicts Game" loading="lazy">
           </figure>
           <div class="project-info">
             <span class="project-tag">Game Jam — 1st Place</span>
-            <h3><a href="#">IP Conflicts</a></h3>
+            <h3><button class="project-link" type="button">IP Conflicts</button></h3>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-project="tracker-app" tabindex="0">
           <figure class="project-image">
             <img src="placeholder-mobile.jpg" alt="Preview of Productivity and Sobriety Tracker Mobile App" loading="lazy">
           </figure>
           <div class="project-info">
             <span class="project-tag">Mobile App</span>
-            <h3><a href="#">Productivity &amp; Sobriety Tracker</a></h3>
+            <h3><button class="project-link" type="button">Productivity &amp; Sobriety Tracker</button></h3>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-project="rentals-system" tabindex="0">
           <figure class="project-image">
             <img src="placeholder-desktop.jpg" alt="Preview of Roadrunner Rentals Desktop Application" loading="lazy">
           </figure>
           <div class="project-info">
             <span class="project-tag">Desktop &amp; Database</span>
-            <h3><a href="#">Roadrunner Rentals System</a></h3>
+            <h3><button class="project-link" type="button">Roadrunner Rentals System</button></h3>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-project="next-build" tabindex="0">
           <figure class="project-image placeholder-box">
-            <!-- Optional visual placeholder for upcoming projects -->
+            <!-- Visual placeholder for upcoming projects -->
           </figure>
           <div class="project-info">
             <span class="project-tag">Coming Soon</span>
-            <h3>Next Build</h3>
+            <h3><button class="project-link" type="button">Next Build</button></h3>
           </div>
         </article>
       </div>
     </section>
   </main>
 
+  <!-- Modal -->
+  <div class="project-modal" aria-hidden="true">
+    <div class="project-modal__backdrop"></div>
+    <div class="project-modal__content" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+      <button class="project-modal__close" aria-label="Close project details">×</button>
+      <div class="project-modal__header">
+        <h3 id="project-modal-title"></h3>
+        <p class="project-modal__tag"></p>
+      </div>
+      <p class="project-modal__description"></p>
+      <div class="project-modal__gallery"></div>
+      <div class="project-modal__links">
+        <a href="#" class="button button-secondary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        <a href="#" class="button button-primary" target="_blank" rel="noopener noreferrer">View on Itch.io</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer / Contact -->
-  <footer class="contact" id="contact">
+  <footer class="contact reveal" id="contact">
     <h2 class="section-heading">Contact</h2>
     <address class="contact-links">
       <a href="mailto:rakenhossain@gmail.com">rakenhossain@gmail.com</a>
