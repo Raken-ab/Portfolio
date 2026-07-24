@@ -16,7 +16,7 @@ Welcome to the repository for my personal developer portfolio! This website serv
 - [Overview](#-overview)
 - [Key Features](#-key-features)
 - [Tech Stack](#-tech-stack)
-
+- [Project Structure](#-project-structure)
 ---
 
 ## 🌟 Overview
