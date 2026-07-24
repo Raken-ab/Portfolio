@@ -16,11 +16,6 @@ Welcome to the repository for my personal developer portfolio! This website serv
 - [Overview](#-overview)
 - [Key Features](#-key-features)
 - [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Local Development Setup](#-local-development-setup)
-- [Deployment](#-deployment)
-- [Featured Projects Highlighted](#-featured-projects-highlighted)
-- [Contact & Connect](#-contact--connect)
 
 ---
 
